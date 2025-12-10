@@ -1,21 +1,22 @@
 {
-  "name": "hexo-word-counter",
-  "version": "0.2.1",
+  "name": "@qzi/hexo-word-counter",
+  "version": "0.2.8",
   "description": "Symbols count and time to read for articles.",
   "main": "index.js",
   "files": [
-    "pkg/**",
+    "pkg",
     "lib",
     "index.js"
   ],
   "scripts": {
-    "build": "wasm-pack build --target nodejs --out-name word_counter",
+    "prepublishOnly": "npm run build",
+    "build": "wasm-pack build --target nodejs --out-name word_counter ",
     "prepare": "npm run build",
     "lint": "eslint index.js lib/",
     "test": "mocha test --reporter spec",
     "test-cov": "c8 --print both _mocha -- test/index.js"
   },
-  "repository": "next-theme/hexo-word-counter",
+  "repository": "qzi/hexo-word-counter",
   "keywords": [
     "hexo",
     "count",
@@ -23,6 +24,9 @@
     "time-to-read"
   ],
   "author": "Mimi <stevenjoezhang@gmail.com> (https://zhangshuqiao.org)",
+  "contributors": [
+    "Leon <i@leonvision.online> (https://leonvision.online)"
+  ],
   "license": "LGPL-3.0",
   "dependencies": {},
   "devDependencies": {

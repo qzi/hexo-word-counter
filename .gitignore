@@ -13,4 +13,5 @@ public/
 wrangler.toml
 .wrangler/
 report.csv
-pkg/
+pkg/**
+!pkg/.npmignore
