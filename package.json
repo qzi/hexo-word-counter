@@ -9,9 +9,9 @@
     "index.js"
   ],
   "scripts": {
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "bun run build",
     "build": "wasm-pack build --target nodejs --out-name word_counter ",
-    "prepare": "npm run build",
+    "prepare": "bun run build",
     "lint": "eslint index.js lib/",
     "test": "mocha test --reporter spec",
     "test-cov": "c8 --print both _mocha -- test/index.js"
